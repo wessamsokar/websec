@@ -26,7 +26,7 @@
                     <input type="password" class="form-control" placeholder="Password" name="password" required>
                 </div>
             </div>
-            
+
             <div class="row mb-2">
                 <div class="col-12">
                     <label class="form-label">Password Confirmtion:</label>

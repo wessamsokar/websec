@@ -11,6 +11,7 @@ class Product extends Model  {
         'price',
         'model',
         'description',
-        'photo'
+        'photo',
+        'stock'
     ];
 }
