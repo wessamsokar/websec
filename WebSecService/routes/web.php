@@ -21,6 +21,7 @@ Route::get('users/create', [UsersController::class, 'create'])->name('users.crea
 Route::post('/users/store', [UsersController::class, 'store'])->name('users.store');
 Route::post('/update-credit', [UsersController::class, 'updateCredit'])->name('update.credit');
 Route::get('/purchases', [UsersController::class, 'purchases'])->name('purchases');
+Route::post('/reset-credit', [UsersController::class, 'reset'])->name('reset.credit');
 
 
 Route::get('products', [ProductsController::class, 'list'])->name('products_list');

@@ -62,6 +62,16 @@
                                     <button type="submit" class="btn btn-primary mt-2">Update</button>
                                 </form>
 
+                                <form action="{{ route('reset.credit') }}" method="POST">
+                                    @csrf
+                                    @can('edit_customer')
+                                    <input type="hidden" name="credit" class="form-control" value="{{ $user->credit }}"
+                                        min="{{ $user->credit }}">
+                                    <input type="hidden" name="id" value="{{ $user->id }}">
+                                    <button type="submit" class="btn btn-primary mt-2">Reset</button>
+                                    @endcan
+                                </form>
+
                             </td>
                         @endcan
 

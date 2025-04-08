@@ -20,6 +20,17 @@ class UsersController extends Controller
     {
         $this->middleware('auth:web')->except('register', 'doRegister', 'login', 'doLogin');
     }
+    public function reset(Request $request)
+    {
+
+        $user = User::find($request->id);
+        $user->credit = 0;
+
+        $user->save();
+
+        return back()->with('success', 'Credit updated successfully!');
+    }
+
     public function purchases()
     {
         $user = auth()->user();
